@@ -12,7 +12,9 @@ import requests
 app = Flask(__name__)
 
 
-client = Client(config.API_KEY, config.API_SECRET)
+API_KEY = 'DV5uON51MNenChwzxHywR03HBWyT2ncWCVxljs3cdS6WvveTqmaiZyqTqdOi2I7f'
+API_SECRET = 'TkJUUld24MAtobhuJT9jReFW8wkXoPq5E14D8k14rCLg2S5eB8CrodfNJRguokbO'
+client = Client(API_KEY, API_SECRET)
 
 def order(symbol, side, quantity):
     try:
