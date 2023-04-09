@@ -1,13 +1,14 @@
-import json, config
+import json
 from flask import Flask, request, jsonify, render_template
 from binance.client import Client
+import streamlit as st
 import requests
 
 
 app = Flask(__name__)
 
 
-client = Client()
+client = Client(st.secrets["a"], st.secrets["b"])
 
 def order(symbol, side, quantity):
     try:
