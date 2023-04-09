@@ -7,10 +7,7 @@ import requests
 app = Flask(__name__)
 
 
-A = "DV5uON51MNenChwzxHywR03HBWyT2ncWCVxljs3cdS6WvveTqmaiZyqTqdOi2I7f"
-S = "TkJUUld24MAtobhuJT9jReFW8wkXoPq5E14D8k14rCLg2S5eB8CrodfNJRguokbO"
-
-client = Client(A, S)
+client = Client()
 
 def order(symbol, side, quantity):
     try:
