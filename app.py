@@ -7,8 +7,9 @@ import requests
 
 app = Flask(__name__)
 
-
-client = Client(st.secrets["a"], st.secrets["b"])
+key = st.secrets["a"]
+secret = st.secrets["b"]
+client = Client(key, secret)
 
 def order(symbol, side, quantity):
     try:
