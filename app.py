@@ -9,11 +9,8 @@ app = Flask(__name__)
 
 key = st.secrets["a"]
 secret = st.secrets["b"]
-try:
-    client = Client(key, secret)
-except Exception as e:
-    print("an exception occured - {}".format(e))
 
+client = Client(key, secret)
 
 def order(symbol, side, quantity):
     try:
