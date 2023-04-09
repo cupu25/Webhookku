@@ -2,17 +2,16 @@ import json, config
 from flask import Flask, request, jsonify, render_template
 from binance.client import Client
 from binance.enums import *
-import ssl
 import requests
 
 
 app = Flask(__name__)
 
 
-API_KEY = "DV5uON51MNenChwzxHywR03HBWyT2ncWCVxljs3cdS6WvveTqmaiZyqTqdOi2I7f"
-API_SECRET = "TkJUUld24MAtobhuJT9jReFW8wkXoPq5E14D8k14rCLg2S5eB8CrodfNJRguokbO"
+A = "DV5uON51MNenChwzxHywR03HBWyT2ncWCVxljs3cdS6WvveTqmaiZyqTqdOi2I7f"
+S = "TkJUUld24MAtobhuJT9jReFW8wkXoPq5E14D8k14rCLg2S5eB8CrodfNJRguokbO"
 
-client = Client(API_KEY, API_SECRET)
+client = Client(A, S)
 
 def order(symbol, side, quantity):
     try:
