@@ -13,7 +13,6 @@ try:
     client = Client(key, secret)
 except Exception as e:
     print("an exception occured - {}".format(e))
-    return False
 
 
 def order(symbol, side, quantity):
