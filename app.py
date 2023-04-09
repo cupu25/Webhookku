@@ -1,7 +1,6 @@
 import json, config
 from flask import Flask, request, jsonify, render_template
 from binance.client import Client
-from binance.enums import *
 import requests
 
 
